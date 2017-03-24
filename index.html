@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nike Black</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="product-card clearfix">
+		<div class="product-card__preview clearfix">
+			<img src="img/logo.png" class="product-card__logo">
+			<div class="goods__slider">
+				<form action="">
+					<ul>
+						<li>
+							<input id="slide_1" type="radio" name="slide" checked>
+							<img src="img/Nike-SB-Stefan-Janoski-Max.png" class="goods__slide__preview first-img">
+						</li>						
+						<li>
+							<input id="slide_2" type="radio" name="slide">		
+							<img src="img/nike-sb-white.png" class="goods__slide__preview">
+						</li>
+						<li>
+							<input id="slide_3" type="radio" name="slide">
+							<img src="img/nike-sb-whitesole.png" class="goods__slide__preview">
+						</li>
+					</ul>
+				</form>
+				<div class="goods__slider-control">
+					<label for="slide_1" class="goods__slide-item black-thumb active">
+						
+					</label>
+					<label for="slide_2" class="goods__slide-item white-thumb">
+						
+					</label>
+					<label for="slide_3" class="goods__slide-item grey-thumb">
+						
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="product-card__details clearfix">
+			<div class="product-card__shoe-name">
+				Nike SB Stefan<br>Janoski Max
+			</div>
+			<p class="product-card__shoe-type">
+				Unisex Skateboarding Shoe 
+			</p>
+			<div class="product-card__rating">
+				<img src="img/stars.png">
+			</div>
+			<div class="product-card__buy-options">
+				<div class="product-card__size-list">
+					<span>Size <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+					<ul class="dropdown-menu">
+						<li>8</li>
+						<li>9</li>
+						<li>10</li>		
+				</div>
+				<div class="product-card__quantity-list">
+					<span>Qty <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+					<ul class="dropdown-menu">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+					</ul>				
+				</div>
+			</div>	
+			<button class="product-card__add-to-cart btn">
+				Add to cart
+			</button>
+		</div>		
+	</div>
+	<script>
+			(function(){
+			var collection = document.querySelectorAll('.goods__slide-item');
+			collection.forEach(function(item){
+				item.addEventListener('click', function(){
+					var el = this;
+				
+					collection.forEach(function(i){
+						i.classList.remove('active');
+					});
+					el.classList.add('active');
+				})
+			});
+		}());
+	</script>
+</body>
+</html>
